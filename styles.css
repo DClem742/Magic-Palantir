@@ -1,0 +1,146 @@
+/* Base styles (for mobile) */
+body {
+    background-color: black;
+    font-size: 16px
+}
+
+h1 {
+    font-size: 2em;
+    color: white;
+    text-align: center;
+    font-family: 'Aniron';
+}
+
+h2 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    font-family: "Aniron";
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400%;
+    height: auto;
+    width: 90%;
+    animation: load 2s infinite;
+    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#palantir-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Aniron', sans-serif;
+    font-size: 1em;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #1c2331, #2c3e50);
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    color: #ecf0f1;
+    font-family: 'Aniron', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #2c3e50, #1c2331);
+    border-color: #3498db;
+    color: #3498db;
+}
+
+#answer-output {
+    text-align: center;
+    font-family: 'Aniron', sans-serif;
+    font-size: 1.5em;
+    color: #3498db;
+    margin-top: 20px 0;
+    min-height: 1.5em;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+@keyframes load {
+    0% {
+        transform: rotate(0);
+        filter: hue-rotate(0deg);
+    }
+    35% {
+        filter: hue-rotate(100deg);
+    }
+    0% {
+        transform: rotate(0);
+        filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes fire {
+    0% { filter: drop-shadow(0 0 10px #ff6600) brightness(1); }
+    50% { filter: drop-shadow(0 0 20px #ff9933) brightness(1.2); }
+    100% { filter: drop-shadow(0 0 10px #ff6600) brightness(1); }
+}
+
+.fiery {
+    animation: fire 0.5s infinite, spin 2s linear infinite;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+    body{
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    img {
+        width: 80%;
+        max-width: 500px;
+    }
+    palantir-form {
+        max-width: 500px;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+    body{
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    img {
+        width: 70%;
+        max-width: 700px;
+    }
+    palantir-form {
+        max-width: 600px;
+    }
+}
