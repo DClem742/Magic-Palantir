@@ -1,7 +1,14 @@
 /* Base styles (for mobile) */
 body {
     background-color: black;
-    font-size: 16px
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -18,19 +25,34 @@ h2 {
     font-family: "Aniron";
 }
 
+
+h6 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    font-family: "Aniron";
+    animation: fadeIn 10s ease-in;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 400%;
-    height: auto;
-    width: 90%;
+    max-height: 40vh;
+    width: auto;
     animation: load 2s infinite;
     -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
     mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
 }
 
-form {
+#palantir-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,8 +60,7 @@ form {
     max-width: 400px;
     margin: 20px auto;
 }
-
-#palantir-input {
+#palantir-input, #fullname, #email {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -49,6 +70,9 @@ form {
     color: white;
     font-family: 'Aniron', sans-serif;
     font-size: 1em;
+}
+#answer-output {
+    min-height: 3em;
 }
 
 button {
@@ -105,6 +129,11 @@ button:hover {
     animation: fire 0.5s infinite, spin 2s linear infinite;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Tablet styles */
 @media screen and (min-width: 768px) {
     body{
@@ -143,4 +172,23 @@ button:hover {
     palantir-form {
         max-width: 600px;
     }
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
