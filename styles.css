@@ -1,4 +1,27 @@
 /* Base styles (for mobile) */
+/* Header styles */
+header {
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Navigation link styles */
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Navigation link hover styles */
+nav a:hover {
+    text-decoration: underline;
+}
+
 body {
     /* Set background color and basic text styling */
     background-color: black;
@@ -31,7 +54,7 @@ h2 {
 }
 
 /* Additional heading styles with fade-in animation */
-h6 {
+h3 {
     font-size: 1.5em;
     color: white;
     text-align: center;
@@ -56,8 +79,8 @@ img {
     max-height: 40vh;
     width: auto;
     animation: load 2s infinite;
-    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
-    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);/* Apply a circular gradient mask to the image */
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 70%, transparent 100%);/* This creates a soft, fading edge effect around the image */
 }
 
 /* Form styles */
@@ -180,25 +203,3 @@ button:hover {
     palantir-form { max-width: 600px; }
 }
 
-/* Header styles */
-header {
-    text-align: center;
-}
-
-/* Navigation styles */
-nav {
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-/* Navigation link styles */
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-/* Navigation link hover styles */
-nav a:hover {
-    text-decoration: underline;
-}
